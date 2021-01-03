@@ -18,6 +18,8 @@
     <div class="container main mt-4 mb-4 p-4">
         <h4 class="display-4 text-center">FCC: Survey Form</h4>
         <hr>
+        
+        <input type="hidden" id="id" value="<?php if(!empty($_GET['q']) and $_GET['q'] == 'update'){ print $_GET['id']; } ?>">
 
         <div class="form-group">
             <label for="name">Name</label>
