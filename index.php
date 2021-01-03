@@ -76,6 +76,64 @@
                 </select>
             </div>
 
+            <div class="form-group">
+                <label for="see_improved">What would you like to see improved? (<small>Check all that apply</small>)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="front_end_projects">
+                    <label class="form-check-label" for="front_end_projects">Front-end Projects</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="back_end_projects">
+                    <label class="form-check-label" for="back_end_projects">Back-end Projects</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="data_visualization">
+                    <label class="form-check-label" for="data_visualization">Data Visualization</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="challenges">
+                    <label class="form-check-label" for="challenges">Challenges</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="open_source_community">
+                    <label class="form-check-label" for="open_source_community">Open Source Community</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gitter">
+                    <label class="form-check-label" for="gitter">Gitter help rooms</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="videos">
+                    <label class="form-check-label" for="videos">Videos</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="city_meetups">
+                    <label class="form-check-label" for="city_meetups">City Meetups</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="wiki">
+                    <label class="form-check-label" for="wiki">Wiki</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="forum">
+                    <label class="form-check-label" for="forum">Forum</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="additional_courses">
+                    <label class="form-check-label" for="additional_courses">Additional Courses</label>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
