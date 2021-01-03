@@ -134,6 +134,11 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label for="suggestions">Any comments or suggestions?</label>
+                <textarea class="form-control" id="suggestions" rows="5" placeholder="Enter your comment here..."></textarea>
+            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
