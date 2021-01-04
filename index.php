@@ -51,17 +51,17 @@
         <div class="form-group">
             <label for="recommend_friend">Would you recommend freeCodeCamp to a friend?</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="definitely" id="definitely" value="definitely">
+                <input class="form-check-input" type="radio" name="recommend_friend" id="definitely" value="definitely">
                 <label class="form-check-label" for="definitely">Definitely</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="maybe" id="maybe" value="maybe">
+                <input class="form-check-input" type="radio" name="recommend_friend" id="maybe" value="maybe">
                 <label class="form-check-label" for="maybe">Maybe</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="not_sure" id="not_sure" value="not_sure">
+                <input class="form-check-input" type="radio" name="recommend_friend" id="not_sure" value="not_sure">
                 <label class="form-check-label" for="not_sure">Not sure</label>
             </div>
         </div>
@@ -80,57 +80,57 @@
         <div class="form-group">
             <label for="see_improved">What would you like to see improved? (<small>Check all that apply</small>)</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="front_end_projects">
+                <input class="form-check-input" type="checkbox" id="front_end_projects" value="front_end_projects" name="see_improved">
                 <label class="form-check-label" for="front_end_projects">Front-end Projects</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="back_end_projects">
+                <input class="form-check-input" type="checkbox" id="back_end_projects" value="back_end_projects" name="see_improved">
                 <label class="form-check-label" for="back_end_projects">Back-end Projects</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="data_visualization">
+                <input class="form-check-input" type="checkbox" id="data_visualization" value="data_visualization" name="see_improved">
                 <label class="form-check-label" for="data_visualization">Data Visualization</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="challenges">
+                <input class="form-check-input" type="checkbox" id="challenges" value="challenges" name="see_improved">
                 <label class="form-check-label" for="challenges">Challenges</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="open_source_community">
+                <input class="form-check-input" type="checkbox" id="open_source_community" value="open_source_community" name="see_improved">
                 <label class="form-check-label" for="open_source_community">Open Source Community</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gitter">
+                <input class="form-check-input" type="checkbox" id="gitter" value="gitter" name="see_improved">
                 <label class="form-check-label" for="gitter">Gitter help rooms</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="videos">
+                <input class="form-check-input" type="checkbox" id="videos" value="videos"name="see_improved">
                 <label class="form-check-label" for="videos">Videos</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="city_meetups">
+                <input class="form-check-input" type="checkbox" id="city_meetups" value="city_meetups" name="see_improved">
                 <label class="form-check-label" for="city_meetups">City Meetups</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="wiki">
+                <input class="form-check-input" type="checkbox" id="wiki" value="wiki" name="see_improved">
                 <label class="form-check-label" for="wiki">Wiki</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="forum">
+                <input class="form-check-input" type="checkbox" id="forum" value="forum"name="see_improved">
                 <label class="form-check-label" for="forum">Forum</label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="additional_courses">
+                <input class="form-check-input" type="checkbox" id="additional_courses" value="additional_courses" name="see_improved">
                 <label class="form-check-label" for="additional_courses">Additional Courses</label>
             </div>
         </div>
