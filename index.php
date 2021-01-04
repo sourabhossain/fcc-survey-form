@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <label for="Age">Age (<small class="font-italic">Optional</small>)</label>
+            <label for="Age">Age</label>
             <input type="number" class="form-control" name="age" id="age">
         </div>
 

@@ -15,7 +15,7 @@ function addSurvey() {
     });
 
     // Validation
-    var nameFormat = /^[a-zA-Z-' ]*$/
+    var nameFormat = /^[a-zA-Z-' ]*$/;
 
     if (!name.match(nameFormat)) {
         alert("Please entry name!");
@@ -28,6 +28,14 @@ function addSurvey() {
     if(!email.match(mailFormat)) {
         alert("Please entry email address!");
         $("#email").focus();
+        return false;
+    }
+
+    var ageFormat = /\s[0-1]{1}[0-9]{0,2}/;
+
+    if (!age.match(ageFormat)) {
+        alert("Please entry age!");
+        $("#age").focus();
         return false;
     }
 }
