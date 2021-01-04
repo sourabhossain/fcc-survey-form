@@ -1,15 +1,29 @@
 function addSurvey() {
-  // get the value
-  var id               = $("#id").val();
-  var name             = $("#name").val();
-  var age              = $("#age").val();
-  var current_role     = $("#current_role").val();
-  var recommend_friend = $("input[name='recommend_friend']:checked").val();
-  var favorite_feature = $("#favorite_feature").val();
-  var suggestions      = $("#suggestions").val();
-  var see_improved     = [];
+    // get the value
+    var id               = $("#id").val();
+    var name             = $("#name").val();
+    var email            = $("#email").val();
+    var age              = $("#age").val();
+    var current_role     = $("#current_role").val();
+    var recommend_friend = $("input[name='recommend_friend']:checked").val();
+    var favorite_feature = $("#favorite_feature").val();
+    var suggestions      = $("#suggestions").val();
+    var see_improved     = [];
 
-  $('input[name="see_improved"]:checked').each(function() {
-      see_improved.push($(this).val());
-  });
+    $('input[name="see_improved"]:checked').each(function() {
+        see_improved.push($(this).val());
+    });
+
+    // Validation
+    if (name == '') {
+        $('#name').focus();   
+    }
+    
+    var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    
+    if(!email.match(mailFormat)) {
+        alert("You have entered an invalid email address!");
+        $("#email").focus();
+        return true;
+    }
 }
