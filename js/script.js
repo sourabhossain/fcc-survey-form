@@ -15,15 +15,19 @@ function addSurvey() {
     });
 
     // Validation
-    if (name == '') {
-        $('#name').focus();   
+    var nameFormat = /^[a-zA-Z-' ]*$/
+
+    if (!name.match(nameFormat)) {
+        alert("Please entry name!");
+        $('#name').focus();
+        return false;   
     }
     
     var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     
     if(!email.match(mailFormat)) {
-        alert("You have entered an invalid email address!");
+        alert("Please entry email address!");
         $("#email").focus();
-        return true;
+        return false;
     }
 }
