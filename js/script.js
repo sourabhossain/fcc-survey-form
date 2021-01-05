@@ -15,12 +15,53 @@ function addSurvey() {
     });
 
     // Validation
-    var nameFormat = new RegExp("(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})");
-
-    if (!nameFormat.exec(name)) {
+    if (name == '') {
         alert("Please entry name!");
         $('#name').focus();
         return false;   
     }
-    
+
+    if(email == '') {
+        alert("Please entry email address!");
+        $("#email").focus();
+        return false;
+    }
+
+    if(age == '') {
+        alert("Please entry age!");
+        $("#age").focus();
+        return false;
+    }
+
+    if(current_role == '') {
+        alert("Please entry current role!");
+        $("#current_role").focus();
+        return false;
+    }
+
+    if($('input:radio[name=recommend_friend]').is(':checked')) {
+        alert("Please entry recommend friend!");
+        $("input[name='recommend_friend']").focus();
+        return false;
+    }
+
+    if(favorite_feature == '') {
+        alert("Please entry favorite feature!");
+        $("#favorite_feature").focus();
+        return false;
+    }
+
+    if(suggestions == '') {
+        alert("Please entry suggestions!");
+        $("#suggestions").focus();
+        return false;
+    }
+
+    if(see_improved == '') {
+        alert("Please entry see improved!");
+        $("#see_improved").focus();
+        return false;
+    }
+ 
+
 }
