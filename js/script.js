@@ -15,5 +15,12 @@ function addSurvey() {
     });
 
     // Validation
+    var nameFormat = new RegExp("(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})");
 
+    if (!nameFormat.exec(name)) {
+        alert("Please entry name!");
+        $('#name').focus();
+        return false;   
+    }
+    
 }
