@@ -2,20 +2,47 @@
 include("db.php");
 header('Content-Type: application/json');
 
-// $data = json_decode(stripslashes($_POST['data']));
-
-// foreach($data as $d){
-//     echo $d;
-// }
-
 if (!empty($_POST['status']) && $_POST['status'] == "insert") {
     
-    $patient_id = clean($_POST['p_patient_id']);
-	$datetime   = date("Y/m/d h:i:sa");
+    $name = clean($_POST['name']);
+    $email = clean($_POST['email']);
+    $age = clean($_POST['age']);
+    $current_role = clean($_POST['current_role']);
+    $recommend_friend = clean($_POST['recommend_friend']);
+    $favorite_feature = clean($_POST['favorite_feature']);
+    $suggestions = clean($_POST['suggestions']);
+    $datetime   = date("Y/m/d h:i:sa");
+    $see_improved = clean($_POST['see_improved']);
     
-    if(!empty($item_name) && !empty($remarks)) {
+    if(!empty($name) && !empty($email) && !empty($age) && !empty($current_role) && !empty($recommend_friend) && !empty($favorite_feature) && !empty($suggestions) && !empty($see_improved)) {
         
-        $query = $conn->exec("INSERT INTO `registration`(`id`, `name`, `email`, `age`, `current_role`, `recommend_friend`, `favorite_feature`, `suggestions`, `see_improved`, `datetime`) VALUES ('0', '$datetime') ");
+        $query = $conn->exec("INSERT INTO `registration`
+                (
+                    `id`, 
+                    `name`, 
+                    `email`, 
+                    `age`, 
+                    `current_role`, 
+                    `recommend_friend`, 
+                    `favorite_feature`, 
+                    `suggestions`, 
+                    `see_improved`, 
+                    `datetime`
+                ) 
+                VALUES 
+                (
+                    '0', 
+                    '$name', 
+                    '$email', 
+                    '$age', 
+                    '$current_role', 
+                    '$recommend_friend', 
+                    '$favorite_feature', 
+                    '$suggestions', 
+                    '$see_improved', 
+                    '$datetime'
+                ) 
+            ");
 
         $data['message'] = "Successfully Done";
 
