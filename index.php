@@ -10,16 +10,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <form action="" method="post" id="register" role="form">
+    <form action="" method="post" id="register" role="form" autocomplete="off">
         <div class="container main mt-4 mb-4 p-4">
             <h4 class="display-4 text-center">FCC: Survey Form</h4>
             <hr>
-            
+
             <input type="hidden" id="id" value="<?= !empty($_GET['update'])? $_GET['id'] : "" ?>">
 
             <div class="form-group">
@@ -39,7 +40,8 @@
 
             <div class="form-group">
                 <label for="current_role">Which option best describes your current role?</label>
-                <select class="form-control" id="current_role" name="current_role" required oninvalid="this.setCustomValidity('Please enter your current role')" oninput="setCustomValidity('')">
+                <select class="form-control" id="current_role" name="current_role" required oninvalid="this.setCustomValidity('Please enter your current role')"
+                    oninput="setCustomValidity('')">
                     <option value="">Select current role</option>
                     <option value="student">Student</option>
                     <option value="job">Full Time Job</option>
@@ -111,7 +113,7 @@
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="videos" value="videos"name="see_improved">
+                    <input class="form-check-input" type="checkbox" id="videos" value="videos" name="see_improved">
                     <label class="form-check-label" for="videos">Videos</label>
                 </div>
 
@@ -126,7 +128,7 @@
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="forum" value="forum"name="see_improved">
+                    <input class="form-check-input" type="checkbox" id="forum" value="forum" name="see_improved">
                     <label class="form-check-label" for="forum">Forum</label>
                 </div>
 
@@ -141,9 +143,48 @@
                 <textarea class="form-control" id="suggestions" rows="5" placeholder="Enter your comment here..." required oninvalid="this.setCustomValidity('Please enter your suggestions')" oninput="setCustomValidity('')"></textarea>
             </div>
 
-            <input type="submit" class="btn btn-primary" value="<?= !empty($_GET['update'])? 'Update Data' : 'Save Data'; ?>">
+            <input type="submit" class="btn btn-primary"
+                value="<?= !empty($_GET['update'])? 'Update Data' : 'Save Data'; ?>">
         </div>
     </form>
+
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">All FCC Survey</h5>
+            
+            <div class="card-body">
+                <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Current Status</th>
+                            <th>Recommend Friend</th>
+                            <th>Favorite Feature</th>
+                            <th>See Improved</th>
+                            <th>Suggestions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Donna Snider</td>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                            <td>$112,000</td>
+                            <td>$112,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <footer class="text-center mb-3">
         <small>Copyright &copy; 2021 <strong>Sourab Hossain</strong>. All rights reserved.</small>
@@ -151,6 +192,8 @@
 
     <!-- JavaScript -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

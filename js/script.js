@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    $('#dataTable').DataTable();
+
     var id = $("#id").val() || "";  
 
     if (id) {
