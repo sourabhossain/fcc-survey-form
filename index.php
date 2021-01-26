@@ -24,22 +24,22 @@
 
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" required name="name" id="name" oninvalid="this.setCustomValidity('Please Enter Your Name')" oninput="setCustomValidity('')">
+                <input type="text" class="form-control" name="name" id="name" required oninvalid="this.setCustomValidity('Please enter your name')" oninput="setCustomValidity('')">
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" id="email">
+                <input type="email" class="form-control" name="email" id="email" required oninvalid="this.setCustomValidity('Please enter your email')" oninput="setCustomValidity('')">
             </div>
 
             <div class="form-group">
                 <label for="Age">Age</label>
-                <input type="number" class="form-control" name="age" id="age">
+                <input type="number" class="form-control" name="age" id="age" required oninvalid="this.setCustomValidity('Please enter your age')" oninput="setCustomValidity('')">
             </div>
 
             <div class="form-group">
                 <label for="current_role">Which option best describes your current role?</label>
-                <select class="form-control" id="current_role" name="current_role">
+                <select class="form-control" id="current_role" name="current_role" required oninvalid="this.setCustomValidity('Please enter your current role')" oninput="setCustomValidity('')">
                     <option value="">Select current role</option>
                     <option value="student">Student</option>
                     <option value="job">Full Time Job</option>
@@ -52,7 +52,7 @@
             <div class="form-group">
                 <label for="recommend_friend">Would you recommend freeCodeCamp to a friend?</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="recommend_friend" id="definitely" value="definitely">
+                    <input class="form-check-input" type="radio" name="recommend_friend" id="definitely" value="definitely" required oninvalid="this.setCustomValidity('Please enter your recommend friend')" oninput="setCustomValidity('')">
                     <label class="form-check-label" for="definitely">Definitely</label>
                 </div>
 
@@ -69,7 +69,7 @@
 
             <div class="form-group">
                 <label for="favorite_feature">What is your favorite feature of freeCodeCamp?</label>
-                <select class="form-control" id="favorite_feature" name="favorite_feature">
+                <select class="form-control" id="favorite_feature" name="favorite_feature" required oninvalid="this.setCustomValidity('Please enter your favorite feature')" oninput="setCustomValidity('')">
                     <option value="">Select an option</option>
                     <option value="challenges">Challenges</option>
                     <option value="projects">Projects</option>
@@ -138,8 +138,7 @@
 
             <div class="form-group">
                 <label for="suggestions">Any comments or suggestions?</label>
-                <textarea class="form-control" id="suggestions" rows="5"
-                    placeholder="Enter your comment here..."></textarea>
+                <textarea class="form-control" id="suggestions" rows="5" placeholder="Enter your comment here..." required oninvalid="this.setCustomValidity('Please enter your suggestions')" oninput="setCustomValidity('')"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -152,6 +151,7 @@
 
     <!-- JavaScript -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
