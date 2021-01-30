@@ -86,28 +86,28 @@ if (!empty($_GET['update'])) {
                         <select class="form-control" id="current_role" name="current_role" required oninvalid="this.setCustomValidity('Please enter your current role')"
                             oninput="setCustomValidity('')">
                             <option value="">Select current role</option>
-                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "student")?  "selected" : "" ?> value="student">Student</option>
-                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "job")?  "selected" : "" ?> value="job">Full Time Job</option>
-                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "learner")?  "selected" : "" ?> value="learner">Full Time Learner</option>
-                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "not_say")?  "selected" : "" ?> value="not_say">Prefer not to say</option>
-                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "other")?  "selected" : "" ?> value="other">Other</option>
+                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "Student")?  "selected" : "" ?> value="Student">Student</option>
+                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "Full Time Job")?  "selected" : "" ?> value="Full Time Job">Full Time Job</option>
+                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "Full Time Learner")?  "selected" : "" ?> value="Full Time Learner">Full Time Learner</option>
+                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "Prefer not to say")?  "selected" : "" ?> value="Prefer not to say">Prefer not to say</option>
+                            <option <?= (!empty($fetch_list['current_role']) && $fetch_list['current_role'] == "Other")?  "selected" : "" ?> value="Other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="recommend_friend">Would you recommend freeCodeCamp to a friend?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="recommend_friend" id="definitely" value="definitely" required oninvalid="this.setCustomValidity('Please enter your recommend friend')" oninput="setCustomValidity('')" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "definitely")?  "checked" : "" ?> >
+                            <input class="form-check-input" type="radio" name="recommend_friend" id="definitely" value="Definitely" required oninvalid="this.setCustomValidity('Please enter your recommend friend')" oninput="setCustomValidity('')" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "Definitely")?  "checked" : "" ?> >
                             <label class="form-check-label" for="definitely">Definitely</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="recommend_friend" id="maybe" value="maybe" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "maybe")?  "checked" : "" ?> >
+                            <input class="form-check-input" type="radio" name="recommend_friend" id="maybe" value="Maybe" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "Maybe")?  "checked" : "" ?> >
                             <label class="form-check-label" for="maybe">Maybe</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="recommend_friend" id="not_sure" value="not_sure" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "not_sure")?  "checked" : "" ?> >
+                            <input class="form-check-input" type="radio" name="recommend_friend" id="not_sure" value="Not sure" <?= (!empty($fetch_list['recommend_friend']) && $fetch_list['recommend_friend'] == "Not sure")?  "checked" : "" ?> >
                             <label class="form-check-label" for="not_sure">Not sure</label>
                         </div>
                     </div>
@@ -116,10 +116,10 @@ if (!empty($_GET['update'])) {
                         <label for="favorite_feature">What is your favorite feature of freeCodeCamp?</label>
                         <select class="form-control" id="favorite_feature" name="favorite_feature" required oninvalid="this.setCustomValidity('Please enter your favorite feature')" oninput="setCustomValidity('')">
                             <option value="">Select an option</option>
-                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "challenges")?  "selected" : "" ?> value="challenges">Challenges</option>
-                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "projects")?  "selected" : "" ?> value="projects">Projects</option>
-                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "community")?  "selected" : "" ?> value="community">Community</option>
-                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "open_source")?  "selected" : "" ?> value="open_source">Open Source</option>
+                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "Challenges")?  "selected" : "" ?> value="Challenges">Challenges</option>
+                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "Projects")?  "selected" : "" ?> value="Projects">Projects</option>
+                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "Community")?  "selected" : "" ?> value="Community">Community</option>
+                            <option <?= (!empty($fetch_list['favorite_feature']) && $fetch_list['favorite_feature'] == "Open Source")?  "selected" : "" ?> value="Open Source">Open Source</option>
                         </select>
                     </div>
 
@@ -136,57 +136,57 @@ if (!empty($_GET['update'])) {
                     <div class="form-group">
                         <label for="see_improved">What would you like to see improved? (<small>Check all that apply</small>)</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="front_end_projects" value="front_end_projects" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("front_end_projects", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="front_end_projects" value="Front-end Projects" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Front-end Projects", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="front_end_projects">Front-end Projects</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="back_end_projects" value="back_end_projects" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("back_end_projects", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="back_end_projects" value="Back-end Projects" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Back-end Projects", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="back_end_projects">Back-end Projects</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="data_visualization" value="data_visualization" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("data_visualization", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="data_visualization" value="Data Visualization" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Data Visualization", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="data_visualization">Data Visualization</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="challenges" value="challenges" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("challenges", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="challenges" value="Challenges" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Challenges", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="challenges">Challenges</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="open_source_community" value="open_source_community" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("open_source_community", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="open_source_community" value="Open Source Community" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Open Source Community", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="open_source_community">Open Source Community</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gitter" value="gitter" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("gitter", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="gitter" value="Gitter help rooms" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Gitter help rooms", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="gitter">Gitter help rooms</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="videos" value="videos" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Videos", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="videos" value="Videos" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Videos", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="videos">Videos</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="city_meetups" value="city_meetups" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("city_meetups", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="city_meetups" value="City Meetups" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("City Meetups", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="city_meetups">City Meetups</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="wiki" value="wiki" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("wiki", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="wiki" value="Wiki" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Wiki", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="wiki">Wiki</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="forum" value="forum" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("forum", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="forum" value="Forum" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Forum", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="forum">Forum</label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="additional_courses" value="additional_courses" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("additional_courses", $see_improved))?  "checked" : "" ?> >
+                            <input class="form-check-input" type="checkbox" id="additional_courses" value="Additional Courses" name="see_improved" <?= (!empty($fetch_list['see_improved']) && in_array("Additional Courses", $see_improved))?  "checked" : "" ?> >
                             <label class="form-check-label" for="additional_courses">Additional Courses</label>
                         </div>
                     </div>
