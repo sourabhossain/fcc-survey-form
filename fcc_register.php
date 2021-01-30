@@ -63,4 +63,18 @@ if (!empty($_POST['status']) && $_POST['status'] == "insert") {
     exit();
 }
 
+if (!empty($_POST['confirm']) && $_POST['confirm'] == "yes") {
+    $query = $conn->prepare("DELETE FROM `registration` WHERE `id` = '".$_POST['id']."' "); 
+    $query->execute();
+
+    if ($query) {
+        $data['message'] = "Delete_Successfully";
+    } else {
+        $data['message'] = "Delete_Field";
+    }
+
+    echo json_encode($data);
+    exit();
+}
+
 ?>

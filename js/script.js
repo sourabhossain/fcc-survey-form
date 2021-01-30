@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 
     $('#dataTable').DataTable();
-
     var id = $("#id").val() || "";  
 
     if (id) {
@@ -41,6 +40,7 @@ $( document ).ready(function() {
                         $("#suggestions").val('');
                         $("input[name='recommend_friend']:checked").prop('checked', false);
                         $('input[name="see_improved"]:checked').prop('checked', false);
+                        $('#member_table').load('member_view.php');
                     }
                 }
             });
@@ -50,5 +50,4 @@ $( document ).ready(function() {
         });
         
     }
-
 });
